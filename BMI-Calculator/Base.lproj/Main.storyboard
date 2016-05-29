@@ -51,7 +51,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crv-08-ff9">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="70" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="crv-08-ff9">
                                         <rect key="frame" x="0.0" y="46" width="100" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="AfW-94-5Ge"/>
@@ -62,11 +62,14 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="HqA-6W-g63">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="70" minValue="30" maxValue="220" translatesAutoresizingMaskIntoConstraints="NO" id="HqA-6W-g63">
                                 <rect key="frame" x="150" y="124" width="420" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Tps-PQ-FKN"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="didChangeWeightSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="HzL-z7-FGB"/>
+                                </connections>
                             </slider>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ixS-Lk-zu2">
                                 <rect key="frame" x="32" y="227" width="100" height="76"/>
@@ -101,7 +104,7 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4A-HM-oGt">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="170" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O4A-HM-oGt">
                                         <rect key="frame" x="0.0" y="46" width="100" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="9wK-un-u4N"/>
@@ -112,11 +115,14 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ffc-R4-kBq">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="170" minValue="140" maxValue="200" translatesAutoresizingMaskIntoConstraints="NO" id="Ffc-R4-kBq">
                                 <rect key="frame" x="151" y="253" width="419" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="qC9-cx-RJA"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="didChangeHeightSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="gP6-qw-mo6"/>
+                                </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6R-sP-rve">
                                 <rect key="frame" x="32" y="353" width="100" height="44"/>
@@ -128,7 +134,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FoK-tB-vGA">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FoK-tB-vGA">
                                 <rect key="frame" x="428" y="357" width="140" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="140" id="1kd-ul-hTa"/>
@@ -149,6 +155,9 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.borderWidth" value="1"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="5"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didSelectCalculateButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u4W-ja-LIK"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -191,6 +200,7 @@
                     <connections>
                         <outlet property="heightField" destination="O4A-HM-oGt" id="dSY-HL-fPt"/>
                         <outlet property="heightSlider" destination="Ffc-R4-kBq" id="9Bi-Gj-XRh"/>
+                        <outlet property="outputLabel" destination="V6R-sP-rve" id="arU-EJ-7GW"/>
                         <outlet property="weightField" destination="crv-08-ff9" id="ALe-Bu-Xmz"/>
                         <outlet property="weightSlider" destination="HqA-6W-g63" id="cuR-Ri-pjM"/>
                     </connections>
