@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE8FF0211D27E5D7007EC275 /* BMI_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8FF0201D27E5D7007EC275 /* BMI_CalculatorTests.swift */; };
+		DE8FF0281D27E615007EC275 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC1E1B11CF5D56600667501 /* ViewController.swift */; };
+		DE8FF0291D280D19007EC275 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC1E1B31CF5D56600667501 /* Main.storyboard */; };
+		DE8FF02A1D280D1E007EC275 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC1E1AF1CF5D56600667501 /* AppDelegate.swift */; };
+		DE8FF02B1D280D25007EC275 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC1E1B81CF5D56600667501 /* LaunchScreen.storyboard */; };
 		DEC1E1B01CF5D56600667501 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC1E1AF1CF5D56600667501 /* AppDelegate.swift */; };
 		DEC1E1B21CF5D56600667501 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC1E1B11CF5D56600667501 /* ViewController.swift */; };
 		DEC1E1B51CF5D56600667501 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC1E1B31CF5D56600667501 /* Main.storyboard */; };
@@ -14,7 +19,20 @@
 		DEC1E1BA1CF5D56600667501 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEC1E1B81CF5D56600667501 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		DE8FF0231D27E5D7007EC275 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEC1E1A41CF5D56600667501 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEC1E1AB1CF5D56600667501;
+			remoteInfo = "BMI-Calculator";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		DE8FF01E1D27E5D7007EC275 /* BMI-CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BMI-CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE8FF0201D27E5D7007EC275 /* BMI_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI_CalculatorTests.swift; sourceTree = "<group>"; };
+		DE8FF0221D27E5D7007EC275 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEC1E1AC1CF5D56600667501 /* BMI-Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BMI-Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEC1E1AF1CF5D56600667501 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEC1E1B11CF5D56600667501 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -25,6 +43,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DE8FF01B1D27E5D7007EC275 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEC1E1A91CF5D56600667501 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -35,10 +60,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DE8FF01F1D27E5D7007EC275 /* BMI-CalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE8FF0201D27E5D7007EC275 /* BMI_CalculatorTests.swift */,
+				DE8FF0221D27E5D7007EC275 /* Info.plist */,
+			);
+			path = "BMI-CalculatorTests";
+			sourceTree = "<group>";
+		};
 		DEC1E1A31CF5D56600667501 = {
 			isa = PBXGroup;
 			children = (
 				DEC1E1AE1CF5D56600667501 /* BMI-Calculator */,
+				DE8FF01F1D27E5D7007EC275 /* BMI-CalculatorTests */,
 				DEC1E1AD1CF5D56600667501 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				DEC1E1AC1CF5D56600667501 /* BMI-Calculator.app */,
+				DE8FF01E1D27E5D7007EC275 /* BMI-CalculatorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +103,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DE8FF01D1D27E5D7007EC275 /* BMI-CalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE8FF0251D27E5D7007EC275 /* Build configuration list for PBXNativeTarget "BMI-CalculatorTests" */;
+			buildPhases = (
+				DE8FF01A1D27E5D7007EC275 /* Sources */,
+				DE8FF01B1D27E5D7007EC275 /* Frameworks */,
+				DE8FF01C1D27E5D7007EC275 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE8FF0241D27E5D7007EC275 /* PBXTargetDependency */,
+			);
+			name = "BMI-CalculatorTests";
+			productName = "BMI-CalculatorTests";
+			productReference = DE8FF01E1D27E5D7007EC275 /* BMI-CalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		DEC1E1AB1CF5D56600667501 /* BMI-Calculator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEC1E1BE1CF5D56600667501 /* Build configuration list for PBXNativeTarget "BMI-Calculator" */;
@@ -94,6 +148,10 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Fröhling";
 				TargetAttributes = {
+					DE8FF01D1D27E5D7007EC275 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = DEC1E1AB1CF5D56600667501;
+					};
 					DEC1E1AB1CF5D56600667501 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
@@ -113,11 +171,21 @@
 			projectRoot = "";
 			targets = (
 				DEC1E1AB1CF5D56600667501 /* BMI-Calculator */,
+				DE8FF01D1D27E5D7007EC275 /* BMI-CalculatorTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DE8FF01C1D27E5D7007EC275 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8FF0291D280D19007EC275 /* Main.storyboard in Resources */,
+				DE8FF02B1D280D25007EC275 /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEC1E1AA1CF5D56600667501 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -131,6 +199,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DE8FF01A1D27E5D7007EC275 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE8FF02A1D280D1E007EC275 /* AppDelegate.swift in Sources */,
+				DE8FF0281D27E615007EC275 /* ViewController.swift in Sources */,
+				DE8FF0211D27E5D7007EC275 /* BMI_CalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEC1E1A81CF5D56600667501 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,6 +219,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE8FF0241D27E5D7007EC275 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEC1E1AB1CF5D56600667501 /* BMI-Calculator */;
+			targetProxy = DE8FF0231D27E5D7007EC275 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		DEC1E1B31CF5D56600667501 /* Main.storyboard */ = {
@@ -162,6 +248,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DE8FF0261D27E5D7007EC275 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BMI-CalculatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bj.frohling.BMI-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BMI-Calculator.app/BMI-Calculator";
+			};
+			name = Debug;
+		};
+		DE8FF0271D27E5D7007EC275 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "BMI-CalculatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "bj.frohling.BMI-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BMI-Calculator.app/BMI-Calculator";
+			};
+			name = Release;
+		};
 		DEC1E1BC1CF5D56600667501 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -272,6 +382,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE8FF0251D27E5D7007EC275 /* Build configuration list for PBXNativeTarget "BMI-CalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE8FF0261D27E5D7007EC275 /* Debug */,
+				DE8FF0271D27E5D7007EC275 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DEC1E1A71CF5D56600667501 /* Build configuration list for PBXProject "BMI-Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -288,6 +406,7 @@
 				DEC1E1C01CF5D56600667501 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

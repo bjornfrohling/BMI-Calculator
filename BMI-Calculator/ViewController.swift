@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 	}
 
 	override func viewWillAppear(animated: Bool) {
-		calculateBmi()
+		updateBmiValue()
 	}
 
 	@IBAction func didChangeWeightSlider(sender: UISlider) {
@@ -38,19 +38,29 @@ class ViewController: UIViewController {
 	}
 
 	@IBAction func didSelectCalculateButton(sender: UIButton) {
-		calculateBmi()
+		updateBmiValue()
 	}
 
-	func calculateBmi() {
-		// BMI: kg/m*2
+	private func updateBmiValue() {
 		let kgValue = Int(weightField.text!)
 		let cmValue = Int(heightField.text!)
 
-		let sizeInMeter = Double(cmValue!) / 100.0
-		let bmi = Int(Double(kgValue!) / (sizeInMeter * sizeInMeter))
+		let bmi = calculateBmi(cmValue!, kgValue: kgValue!)
 
 		let output = "BMI: \(bmi)"
 		outputLabel.text = output
+	}
+
+	func calculateBmi(cmValue: Int, kgValue: Int) -> Int {
+		var bmi = 0
+
+		if cmValue > 0 && kgValue > 0 {
+			// BMI: kg/m*2
+			let sizeInMeter = Double(cmValue) / 100.0
+			bmi = Int(Double(kgValue) / (sizeInMeter * sizeInMeter))
+		}
+
+		return bmi
 	}
 }
 
